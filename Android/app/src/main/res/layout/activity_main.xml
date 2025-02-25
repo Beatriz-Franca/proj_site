@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BA3939"
+    android:backgroundTint="#FDE9CC"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextBmenor"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Base menor"
+        tools:ignore="Autofill,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck,HardcodedText,LabelFor,MissingConstraints,VisualLintOverlap"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/editTextBmaior"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Base maior"
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints,DuplicateSpeakableTextCheck"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <EditText
+        android:id="@+id/editTextAltura"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Altura "
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints,VisualLintOverlap"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <Button
+        android:id="@+id/buttonCalcula"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="calcula area"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAltura"
+        tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/TextViewResultado"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/trapezio"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

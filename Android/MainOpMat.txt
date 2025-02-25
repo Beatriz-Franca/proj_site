@@ -1,0 +1,38 @@
+private EditText editTextNum1;
+private EditText editTextNum2;
+private Button buttonSoma;
+private Button buttonSubtracao;
+private Button buttonDivisao;
+private Button buttonMultiplicacao;
+private TextView textViewResultado;
+private Operacao operacao;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        //referencias
+        editTextNum1 = findViewById(R.id.editTextNum1);
+        editTextNum2 = findViewById(R.id.editTextNum2);
+        buttonSoma = findViewById(R.id.buttonSoma);
+        buttonSubtracao = findViewById(R.id.buttonSubtracacao);
+        buttonDivisao = findViewById(R.id.buttonDivisao);
+        buttonMultiplicacao = findViewById(R.id.buttonMultiplicacao);
+
+        //criando o evento do botão soma
+        buttonSoma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //criando um objeto
+                operacao = new Operacao(Double.parseDouble(editTextNum1.getText().toString()),
+                        Double.parseDouble(editTextNum2.getText().toString()) );
+                operacao.soma();
+            }
+        });
+    }

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProjEx</string>
+    <string name="button">Button</string>
+    <string name="calcula_a_rea">Calcula a área</string>
+</resources>

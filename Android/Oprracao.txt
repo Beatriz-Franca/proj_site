@@ -1,0 +1,22 @@
+private double num1;
+    private double num2;
+
+    // construtores
+
+    public Operacao(double num1, double num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    //metodo
+    public double soma(){
+       return num1 + num2;
+    }
+    public double subtracao(){
+        return num1 - num2;
+    }
+    public double divisao(){
+        return num1 / num2;
+    }
+    public double multiplicacao(){
+        return num1 * num2;
+    }
